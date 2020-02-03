@@ -14,7 +14,7 @@ String page = "";
 int LEDPin = 13;
 void setup(void){
   //the HTML of the web page
-  page = "<h1>Sera Sulama Projesi Oguzkaan</h1><p><a href=\"selenoidOn\"><button>ON</button></a>&nbsp;<a href=\"selenoidOff\"><button>OFF</button></a></p>";
+  page = "<h1>Sera Sulama Projesi Oguzkaan</h1><p><a href=\"LEDOn\"><button>AC</button></a>&nbsp;<a href=\"LEDOff\"><button>KAPAT</button></a></p>";
   //make the LED pin output and initially turned off
   pinMode(LEDPin, OUTPUT);
   digitalWrite(LEDPin, LOW);
@@ -141,7 +141,7 @@ byte sendEmail(String ipAddress)
   Serial.println(F("Sending User"));
   // Change this to your base64, ASCII encoded username
   /*
-  For example, the email address ali@cobani.me would be encoded as YWxpQGNvYmFuaS5tZQ==
+  For example, the email address test@gmail.com would be encoded as dGVzdEBnbWFpbC5jb20=
   */
   espClient.println("YWxpQGNvYmFuaS5tZQ=="); //base64, ASCII encoded Username
   if (!emailResp()) 
